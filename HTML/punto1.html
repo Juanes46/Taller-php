@@ -23,17 +23,11 @@
   
     </header>
     <h1>Ejercicio 1</h1>
-    <form action="#" method="get">
-        <legend>Ingrese la palabra que deseas convertir en acronimo</legend>
+    <form action="../PHP/punto1.php" method="post">
+        <legend>Ingrese la frase que deseas convertir en acrónimo</legend>
         <div>
-            <label for="">Palabra:</label>
-            <input type="text" 
-            name="nombre"
-            maxlength="60"
-            required>
-
+            <label for="frase">Frase:</label>
+            <input type="text" name="frase" maxlength="60" required>
         </div>
+        <button type="submit">Convertir</button>
     </form>
-
-</body>
-</html>

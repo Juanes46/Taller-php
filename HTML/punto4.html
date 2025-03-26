@@ -20,15 +20,23 @@
         <li><a href="../HTML/punto6.html">Punto 6</a></li>  
   
     </header>
-
-    <h1>Ejercicio 4</h1>
-    <form action="#" method="get">
-        <legend>Ingrese la palabra que deseas convertir en acronimo</legend>
-        <div>
-            <label for="">Palabra:</label>
-            <input type="text" 
-            name="nombre"
-            maxlength="60"
-            required>
+    
+    
+            <h1>Operaciones con Conjuntos</h1>
+            <p>Ingrese los elementos de los conjuntos separados por comas.</p>
+        
+            <form action="../PHP/punto4.php" method="post">
+                <label for="conjuntoA">Conjunto A:</label>
+                <input type="text" id="conjuntoA" name="conjuntoA" placeholder="Ej: 1,2,3,4,5" required>
+                <br><br>
+                
+                <label for="conjuntoB">Conjunto B:</label>
+                <input type="text" id="conjuntoB" name="conjuntoB" placeholder="Ej: 3,4,5,6,7" required>
+                <br><br>
+        
+                <button type="submit">Calcular</button>
+            </form>
+        
+    
 </body>
 </html>

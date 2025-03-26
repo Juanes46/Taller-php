@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
- 
+
 <head>
+
     <meta charset="UTF-8">
     <title>5. Binarios</title>
-    <link rel="stylesheet" href="../estilo.css">
-    <link rel="stylesheet" href="../respuesta5.php">
+
 </head>
 
-<body>
-    <main>
-        <a href="../Ejercicios.html">Volver</a>
-        <h1>Convertidor Binario</h1>
-        <p>Ingrese un NÚMERO ENTERO para convertirlo a BINARIO</p>
-        <form action="../Ejercicio 5/logica5.php" method="post">
-            <div>
-                <label for="">Número:</label>
-                <input type="number" name="entero" placeholder="12345" maxlength="5" required>
-            </div>
-            <button type="submit">Enviar para procesar</button>
-        </form>
-    </main>
-</body>
+    <body>
+        <header>
+            <li><a href="../index.html">Inicio</a></li>
+
+            <li><a href="../HTML/punto1.html">Punto 1</a></li>  
+
+            <li><a href="../HTML/punto2.html">Punto 2</a></li>
+
+            <li><a href="../HTML/punto3.html">Punto 3</a></li>
+
+            <li><a href="../HTML/punto4.html">Punto 4</a></li>
+            
+            <li><a href="../HTML/punto6.html">Punto 6</a></li>  
+    
+        </header>
+        
+       
+            <h1>Convertidor de Números a Binario</h1>
+            <p>Ingrese un número entero para convertirlo a binario</p>
+            
+            <form action="../PHP/punto5.php" method="post">
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" required>
+                <button type="submit">Convertir</button>
+            </form>
+      
+    
+        
+    </body>
 
 </html>

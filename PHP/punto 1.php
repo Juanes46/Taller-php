@@ -1,25 +1,84 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "post") {
-    $frase = $_post['frase'];
+// Verifica si el formulario ha sido enviado con el método POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Eliminar signos de puntuación, excepto los espacios y guiones
-    $frase = preg_replace("/[^a-zA-Z0-9-\s]/", "", $frase);
+    // Verifica si el campo 'frase' está presente en la solicitud
+    if (isset($_POST['frase']) && !empty(trim($_POST['frase']))) {
+        
+        // Obtiene la frase y la sanitiza
+        $frase = trim($_POST['frase']);
 
-    // Dividir la frase en palabras usando espacios y guiones como separadores
-    $palabras = preg_split("/[\s-]+/", $frase);
+        class Acronimo
+        {
+            private $frase;
+            private $acronimo;
 
-    // Obtener la primera letra de cada palabra y convertirla a mayúscula
-    $acronimo = "";
-    foreach ($palabras as $palabra) {
-        $acronimo .= strtoupper($palabra[0]);
+            public function __construct($frase)
+            {
+                $this->setFrase($frase);
+            }
+
+            public function setFrase($frase)
+            {
+                $this->frase = $this->procesarFrase($frase);
+                $this->acronimo = $this->generarAcronimo();
+            }
+
+            public function getAcronimo()
+            {
+                return $this->acronimo;
+            }
+
+            private function procesarFrase($frase)
+            {
+                $frase = strtoupper($frase);
+                $fraseLimpia = "";
+
+                for ($i = 0; $i < strlen($frase); $i++) {
+                    $caracter = $frase[$i];
+
+                    if (ctype_alpha($caracter) || $caracter == ' ' || $caracter == '-') {
+                        $fraseLimpia .= $caracter;
+                    }
+                }
+
+                return trim($fraseLimpia);
+            }
+
+            private function generarAcronimo()
+            {
+                $acronimo = "";
+                $longitud = strlen($this->frase);
+                $tomarLetra = true;
+
+                for ($i = 0; $i < $longitud; $i++) {
+                    $caracter = $this->frase[$i];
+
+                    if ($tomarLetra && ctype_alpha($caracter)) {
+                        $acronimo .= $caracter;
+                        $tomarLetra = false;
+                    }
+
+                    if ($caracter == ' ' || $caracter == '-') {
+                        $tomarLetra = true;
+                    }
+                }
+
+                return $acronimo;
+            }
+        }
+
+        // Instancia la clase con la frase ingresada
+        $datos = new Acronimo($frase);
+
+        // Muestra el acrónimo generado
+        echo "<h2>El acrónimo de '" . htmlspecialchars($frase) . "' es: " . htmlspecialchars($datos->getAcronimo()) . "</h2>";
+
+    } else {
+        echo "<h2>Error: No ingresaste una frase válida.</h2>";
     }
-
-    // Mostrar el resultado
-    echo "<h2>Frase ingresada: $frase</h2>";
-    echo "<h2>Acrónimo: <strong>$acronimo</strong></h2>";
 } else {
-    echo "<h2>Error: No se recibió ninguna frase.</h2>";
+    echo "<h2>Error: Método de solicitud no válido.</h2>";
 }
+
 ?>
-<br>
-<a href="../HTML/punto1.html">Volver</a>

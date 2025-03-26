@@ -21,18 +21,23 @@
   
     </header>
 
-
-    <div>
-        <h1>Ejercicio 2</h1>
-        <form action="#" method="get">
-        <legend>Ingrese la palabra que deseas convertir en acronimo</legend>
-        <label for="">Palabra:</label>
-        <input type="text" 
-            name="nombre"
-            maxlength="60"
-            required>
-        </form>
-    </div>
-    
-</body>
+        
+        <div class="container">
+            <h2>Bienvenido, ¿qué desea calcular?</h2>
+            <form action="../PHP/punto2.php" method="post">
+                <label>
+                    <input type="radio" name="opcion" value="1" required> Sucesión de Fibonacci
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="opcion" value="2" required> Número Factorial
+                </label>
+                <br>
+                <label for="numero">Ingrese un número:</label>
+                <input type="number" name="numero" id="numero" required>
+                <br>
+                <button type="submit">Calcular</button>
+            </form>
+        </div>
+    </body>
 </html>

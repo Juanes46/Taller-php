@@ -6,28 +6,32 @@
 </head>
 
 <body>
-    
+
     <header>
-
-        <li><a href="../index.html">Inicio</a></li>
-
-        <li><a href="../HTML/punto2.html">Punto 2</a></li>
-
-        <li><a href="../HTML/punto3.html">Punto 3</a></li>
-
-        <li><a href="../HTML/punto4.html">Punto 4</a></li>
-
-        <li><a href="../HTML/punto5.html">Punto 5</a></li>
-        
-        <li><a href="../HTML/punto6.html">Punto 6</a></li>  
-  
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../HTML/punto2.html">Punto 2</a></li>
+                <li><a href="../HTML/punto3.html">Punto 3</a></li>
+                <li><a href="../HTML/punto4.html">Punto 4</a></li>
+                <li><a href="../HTML/punto5.html">Punto 5</a></li>
+                <li><a href="../HTML/punto6.html">Punto 6</a></li>
+            </ul>
+        </nav>
     </header>
+
     <h1>Ejercicio 1</h1>
-    <form action="../PHP/punto1.php" method="post">
-        <legend>Ingrese la frase que deseas convertir en acrónimo</legend>
-        <div>
-            <label for="frase">Frase:</label>
-            <input type="text" name="frase" maxlength="60" required>
-        </div>
-        <button type="submit">Convertir</button>
+
+    <form action="../PHP/punto 1.php" method="post">
+        <fieldset>
+            <legend>Ingrese la frase que deseas convertir en acrónimo</legend>
+            <div>
+                <label for="frase">Frase:</label>
+                <input type="text" id="frase" name="frase" maxlength="60" required>
+            </div>
+            <button type="submit">Convertir</button>
+        </fieldset>
     </form>
+
+</body>
+</html>

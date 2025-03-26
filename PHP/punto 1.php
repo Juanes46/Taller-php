@@ -1,8 +1,6 @@
 <?php
-// Verifica si el formulario ha sido enviado con el método POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Verifica si el campo 'frase' está presente en la solicitud
     if (isset($_POST['frase']) && !empty(trim($_POST['frase']))) {
         
         // Obtiene la frase y la sanitiza
@@ -68,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        // Instancia la clase con la frase ingresada
+
         $datos = new Acronimo($frase);
 
         // Muestra el acrónimo generado

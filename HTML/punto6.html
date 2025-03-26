@@ -1,38 +1,42 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ejercicio 6</title>
-    <link rel="stylesheet" href="../CSS/Styles.css">
-</head>
-<body>
-    <header class="custom-header">
-        <h1>Taller PHP</h1>
-    </header>
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Construcción de Árbol Binario</title>  
+    <link rel="stylesheet" href="../CSS/Styles.css">  
+</head>  
+<body>  
+    <header class="custom-header">  
+        <h1>Taller PHP</h1>  
+    </header>  
 
-         <!-- Navbar-->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../HTML/punto1.html">Punto 1</a></li>
-                <li><a href="../HTML/punto2.html">Punto 2</a></li>
-                <li><a href="../HTML/punto3.html">Punto 3</a></li>
-                <li><a href="../HTML/punto4.html">Punto 4</a></li>
-                <li><a href="../HTML/punto5.html">Punto 5</a></li>
+    <!-- Navbar-->  
+    <nav class="navbar">  
+        <div class="container">  
+            <ul class="nav-links">  
+                <li><a href="../index.html">Inicio</a></li>  
+                <li><a href="../HTML/punto1.html">Punto 1</a></li>  
+                <li><a href="../HTML/punto2.html">Punto 2</a></li>  
+                <li><a href="../HTML/punto3.html">Punto 3</a></li>  
+                <li><a href="../HTML/punto4.html">Punto 4</a></li>  
+                <li><a href="../HTML/punto5.html">Punto 5</a></li>  
                 <li><a href="../HTML/punto6.html">Punto 6</a></li>  
-            </ul>
-        </div>
-    </nav>
-    <br>
-    <h1>Ejercicio 6</h1>
-    <form action="#" method="get">
-        <legend>Ingrese la palabra que deseas convertir en acronimo</legend>
-        <div>
-            <label for="">Palabra:</label>
-            <input type="text" 
-            name="nombre"
-            maxlength="60"
-            required>
-</body>
-</html>
+            </ul>  
+        </div>  
+    </nav>  
+    <br>  
+    <h2>Ejercicio 6</h2>
+    <h3>Construir un árbol binario y mostrar Preorden, Inorden y Postorden</h3>  
+
+    <form method="post" action="../PHP/punto6.php"> <!-- Asegúrate de que la ruta sea correcta -->  
+        <label>Ingrese los valores separados por espacios (ejemplo: A B D E C):</label><br>  
+        <input type="text" name="valor" required><br><br>  
+        <input type="submit" value="Insertar y Mostrar Recorridos">  
+    </form>  
+
+</body>  
+</html>  
+
+
+
+

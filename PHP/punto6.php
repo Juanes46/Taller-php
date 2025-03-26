@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['valor'])) {
     echo "Inorden: " . implode(" ", $arbol->inorden($arbol->raiz)) . "<br>";  
     echo "Postorden: " . implode(" ", $arbol->postorden($arbol->raiz)) . "<br>";  
 
-    echo "<h3>Árbol Binario Visual:</h3>";  
+    echo "<h3>Árbol Binario:</h3>";  
     $arbol->imprimirArbol($arbol->raiz);  
 }  
 ?>  

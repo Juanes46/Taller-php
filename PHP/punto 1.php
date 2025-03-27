@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 for ($i = 0; $i < strlen($frase); $i++) {
                     $caracter = $frase[$i];
 
-                    if (ctype_alpha($caracter) || $caracter == ' ' || $caracter == '-' || $caracter == '_') {
+                    if (ctype_alpha($caracter) || $caracter == ' ' || $caracter == '-' || $caracter == '_' ) {
                         $fraseLimpia .= $caracter;
                     }
                 }
@@ -57,9 +57,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $tomarLetra = false;
                     }
 
-                    if ($caracter == ' ' || $caracter == '-') {
+                    if ($caracter == ' ' || $caracter == '-' || $caracter == '_') {
                         $tomarLetra = true;
                     }
+                    
                 }
 
                 return $acronimo;

@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 for ($i = 0; $i < strlen($frase); $i++) {
                     $caracter = $frase[$i];
 
-                    if (ctype_alpha($caracter) || $caracter == ' ' || $caracter == '-') {
+                    if (ctype_alpha($caracter) || $caracter == ' ' || $caracter == '-' || $caracter == '_') {
                         $fraseLimpia .= $caracter;
                     }
                 }
